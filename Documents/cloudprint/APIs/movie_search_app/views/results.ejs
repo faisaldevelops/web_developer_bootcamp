@@ -1,0 +1,13 @@
+<h1>RESULTS PAGE</h1>
+<% if(data['Response'] == 'False'){ %>
+  <h2> MOVIE NOT FOUND </h2>
+<% }
+else{ %>
+  <% data['Search'].forEach(function(movie){ %>
+    <li>
+      <%= movie['Title'] %>---- <a href='<%= movie['Poster'] %>'>CLick Me!... for movie Poster</a>
+    </li>
+  <% }) %>
+
+<% } %>
+<a href="http://localhost:3000">Search again</a>

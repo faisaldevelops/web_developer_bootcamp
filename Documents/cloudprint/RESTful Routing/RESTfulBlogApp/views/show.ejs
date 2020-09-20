@@ -1,0 +1,20 @@
+<%- include('./partials/header'); -%>
+<div class="ui main text container segment">
+     <div class="ui huge header"><%= blog.title %></div>
+     <div class="ui top attached">
+          <div class="item">
+               <img class="ui centered rounded image" src="<%= blog.image %>">
+          </div>
+          <div class="content">
+               <span><%= blog.created.toDateString() %></span>
+               <!-- There are other date libraries in Express
+               one among them is moment.js -->
+          </div>
+          <div class="description">
+                   <p><%- blog.body %></p>
+                   <!-- Here we put - so that we can run html within the body -->
+          </div>
+     </div>
+
+</div>
+<%- include('./partials/footer'); -%>

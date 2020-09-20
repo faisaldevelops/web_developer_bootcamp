@@ -1,0 +1,22 @@
+<%- include('partials/header'); -%>
+
+<h1>The Posts Page</h1>
+<!-------------------------
+//   ONE WAY
+//------------------------->
+<% for( var i=0; i<postejs.length; i++){ %>
+  <li>
+    <%= postejs[i].title  %> -<strong> <%= postejs[i].author %> </strong>
+  </li>
+<% } %>
+
+<!-----------------------------
+//  SECOND WAY
+//----------------------------->
+<% postejs.forEach(function(post){ %>
+  <li>
+    <%= post.title %> - <strong><%= post.author %>  </strong>
+  </li>
+<% }) %>
+
+<%- include('partials/footer'); -%>
